@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anya — About Me</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Compiled Tailwind CSS -->
+    <link rel="stylesheet" href="css/tailwind.css" />
+  </head>
+
+  <body class="bg-cloud text-navy">
+    <!-- ============ HEADER / NAV ============ -->
+    <header
+      class="sticky top-0 z-50 bg-cloud/90 backdrop-blur border-b border-sky-100"
+    >
+      <div
+        class="max-w-6xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between"
+      >
+        <a
+          href="#profile"
+          class="nav-link font-display text-2xl tracking-wide text-navy"
+        >
+          ANYA<span class="text-sky-500">.</span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-2" id="nav-desktop">
+          <button type="button" class="nav-tab is-active" data-scroll="profile">
+            01 · About Me
+          </button>
+          <button type="button" class="nav-tab" data-scroll="interests">
+            02 · My Interest
+          </button>
+          <button type="button" class="nav-tab" data-scroll="funfacts">
+            03 · Fun Facts
+          </button>
+          <button type="button" class="nav-tab" data-scroll="contact">
+            04 · Hit Me Up
+          </button>
+        </nav>
+
+        <!-- Mobile toggle -->
+        <button
+          id="menu-btn"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          class="md:hidden relative w-9 h-9 flex flex-col justify-center items-center gap-[5px]"
+        >
+          <span
+            class="menu-bar block w-6 h-[2px] bg-navy transition-all duration-300"
+          ></span>
+          <span
+            class="menu-bar block w-6 h-[2px] bg-navy transition-all duration-300"
+          ></span>
+          <span
+            class="menu-bar block w-6 h-[2px] bg-navy transition-all duration-300"
+          ></span>
+        </button>
+      </div>
+
+      <!-- Mobile nav -->
+      <nav
+        id="nav-mobile"
+        class="md:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out border-t border-sky-100"
+      >
+        <div class="flex flex-col px-5 py-2">
+          <button
+            type="button"
+            class="nav-tab is-active !justify-start text-left py-3"
+            data-scroll="profile"
+          >
+            01 · About Me
+          </button>
+          <button
+            type="button"
+            class="nav-tab !justify-start text-left py-3"
+            data-scroll="interests"
+          >
+            02 · My Interest
+          </button>
+          <button
+            type="button"
+            class="nav-tab !justify-start text-left py-3"
+            data-scroll="funfacts"
+          >
+            03 · Fun Facts
+          </button>
+          <button
+            type="button"
+            class="nav-tab !justify-start text-left py-3"
+            data-scroll="contact"
+          >
+            04 · Hit Me Up
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ============ MAIN ============ -->
+    <main class="max-w-6xl mx-auto px-5 sm:px-8">
+      <!-- ===================================================== -->
+      <!-- 01 · MY PROFILE                                        -->
+      <!-- ===================================================== -->
+      <section id="profile" class="scroll-mt-24 py-14 sm:py-20">
+        <p class="eyebrow reveal">01 / About Me</p>
+
+        <!-- Row 1: Heading sejajar dengan Foto -->
+        <div
+          class="grid md:grid-cols-[1.1fr_0.9fr] gap-8 md:gap-12 items-center mt-2 mb-8"
+        >
+          <h1 class="font-display text-4xl sm:text-6xl tracking-wide reveal">
+            FRAMES, FILMS<br class="hidden sm:block" />
+            &amp; FAST LAPS.
+          </h1>
+
+          <div class="reveal">
+            <div class="ticket-card overflow-hidden">
+              <div class="aspect-[4/5] w-full overflow-hidden bg-sky-100">
+                <img
+                  src="img/profile.jpg"
+                  alt="Anya's profile photo"
+                  class="w-full h-full object-cover"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/500x625/E3F1FC/16324F?text=Anya';
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Deskripsi About Me sejajar dengan Biodata -->
+        <div
+          class="grid md:grid-cols-[1.1fr_0.9fr] gap-8 md:gap-12 items-stretch"
+        >
+          <!-- Left: About text -->
+          <div class="ticket-card p-7 sm:p-10 reveal">
+            <span
+              class="film-strip absolute -left-2 top-6 bottom-6 w-2 rounded-full hidden sm:block"
+            ></span>
+            <p class="font-mono text-xs tracking-[0.25em] text-sky-600 mb-4">
+              HI, MY NAME IS
+            </p>
+            <p class="text-base sm:text-lg leading-relaxed text-navy/90">
+              Hi, I'm <span class="font-semibold text-sky-600">Anya</span>! Just
+              a Taurus/INTJ who's lowkey obsessed with good storytelling,
+              high-speed strategy, and aesthetic frames. Most days you'll find
+              me analyzing film plots, stressing over F1 race weekends, or
+              hunting raw moments through my Sony camera. Always down for deep
+              conversations, cinema rants, or debriefing the latest Grand Prix!
+            </p>
+          </div>
+
+          <!-- Right: Bio data singkat -->
+          <div class="ticket-card p-7 sm:p-10 reveal">
+            <p class="font-mono text-xs tracking-[0.25em] text-sky-600 mb-4">
+              QUICK BIO
+            </p>
+            <dl class="grid grid-cols-2 gap-x-4 gap-y-5 font-mono text-sm">
+              <div>
+                <dt class="text-slate text-xs tracking-widest">NAME</dt>
+                <dd class="text-navy font-semibold text-base mt-1">Anya</dd>
+              </div>
+              <div>
+                <dt class="text-slate text-xs tracking-widest">AGE</dt>
+                <dd class="text-navy font-semibold text-base mt-1">20 Tahun</dd>
+              </div>
+              <div>
+                <dt class="text-slate text-xs tracking-widest">ZODIAC</dt>
+                <dd class="text-navy font-semibold text-base mt-1">Taurus</dd>
+              </div>
+              <div>
+                <dt class="text-slate text-xs tracking-widest">MBTI</dt>
+                <dd class="text-navy font-semibold text-base mt-1">INTJ</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- 02 · MY INTERESTS                                      -->
+      <!-- ===================================================== -->
+      <section
+        id="interests"
+        class="scroll-mt-24 py-14 sm:py-20 border-t border-sky-100"
+      >
+        <p class="eyebrow reveal">02 / My Interest</p>
+        <h2
+          class="font-display text-4xl sm:text-6xl tracking-wide mt-2 mb-10 reveal"
+        >
+          WHAT I'M INTO.
+        </h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="frame-card group reveal">
+            <div
+              class="-mx-6 -mt-6 sm:-mx-7 sm:-mt-7 mb-5 aspect-[16/10] overflow-hidden bg-sky-100"
+            >
+              <img
+                src="img/cinephile.jpg"
+                alt="Cinephile — cinematography inspiration"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/600x375/E3F1FC/16324F?text=Cinephile';
+                "
+              />
+            </div>
+            <span class="font-mono text-xs text-sky-500 tracking-widest"
+              >FRAME 01</span
+            >
+            <h3 class="font-display text-3xl tracking-wide mt-2 mb-1">
+              CINEPHILE
+            </h3>
+            <p class="text-sky-600 text-sm italic mb-4">
+              cinematography is my roman empire.
+            </p>
+            <p class="text-sm sm:text-base text-navy/80 leading-relaxed">
+              I'm soooo in love with Christopher Nolan's work. Always down for
+              mind-bending plot twists and insane visuals. What's your all-time
+              favorite film?
+            </p>
+          </article>
+
+          <article class="frame-card group reveal">
+            <div
+              class="-mx-6 -mt-6 sm:-mx-7 sm:-mt-7 mb-5 aspect-[16/10] overflow-hidden bg-sky-100"
+            >
+              <img
+                src="img/formula1.jpg"
+                alt="Formula 1 — race weekend"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/600x375/E3F1FC/16324F?text=Formula+1';
+                "
+              />
+            </div>
+            <span class="font-mono text-xs text-sky-500 tracking-widest"
+              >FRAME 02</span
+            >
+            <h3 class="font-display text-3xl tracking-wide mt-2 mb-1">
+              FORMULA 1
+            </h3>
+            <p class="text-sky-600 text-sm italic mb-4">
+              lights out and away we go.
+            </p>
+            <p class="text-sm sm:text-base text-navy/80 leading-relaxed">
+              My weekends literally revolve around race schedules. My ultimate
+              trio are George Russell, Kimi Antonelli, and Charles Leclerc!
+            </p>
+          </article>
+
+          <article class="frame-card group reveal">
+            <div
+              class="-mx-6 -mt-6 sm:-mx-7 sm:-mt-7 mb-5 aspect-[16/10] overflow-hidden bg-sky-100"
+            >
+              <img
+                src="img/photography.jpg"
+                alt="Photography — raw moments through the lens"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/600x375/E3F1FC/16324F?text=Photography';
+                "
+              />
+            </div>
+            <span class="font-mono text-xs text-sky-500 tracking-widest"
+              >FRAME 03</span
+            >
+            <h3 class="font-display text-3xl tracking-wide mt-2 mb-1">
+              PHOTOGRAPHY
+            </h3>
+            <p class="text-sky-600 text-sm italic mb-4">
+              sony user through and through.
+            </p>
+            <p class="text-sm sm:text-base text-navy/80 leading-relaxed">
+              Life looks so much better through a lens. Certified Sony loyalist
+              who's constantly obsessed with hunting raw moments and aesthetic
+              frames.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- 03 · FUN FACTS (2 Truths & a Lie)                      -->
+      <!-- ===================================================== -->
+      <section
+        id="funfacts"
+        class="scroll-mt-24 py-14 sm:py-20 border-t border-sky-100"
+      >
+        <p class="eyebrow reveal">03 / Fun Facts</p>
+        <h2
+          class="font-display text-4xl sm:text-6xl tracking-wide mt-2 mb-3 reveal"
+        >
+          2 LIES, 1 TRUTH.
+        </h2>
+        <p class="text-slate mb-10 reveal">
+          Tap the statement you think is real. One truth is hiding in every
+          round.
+        </p>
+
+        <div class="ticket-card p-6 sm:p-10 reveal">
+          <!-- Round indicator -->
+          <div
+            class="flex items-center gap-3 mb-6 font-mono text-xs tracking-widest text-slate"
+          >
+            <span id="round-indicator">ROUND 1 / 2</span>
+            <div class="flex-1 h-px bg-sky-100"></div>
+          </div>
+
+          <!-- Round 1 -->
+          <div class="round-block" data-round="1">
+            <div class="grid gap-3">
+              <button type="button" class="fact-btn" data-truth="false">
+                Minum kopi setiap hari
+              </button>
+              <button type="button" class="fact-btn" data-truth="false">
+                Makan indomie goreng pake telur dadar
+              </button>
+              <button type="button" class="fact-btn" data-truth="true">
+                Gak suka terong
+              </button>
+            </div>
+          </div>
+
+          <!-- Round 2 -->
+          <div class="round-block hidden" data-round="2">
+            <div class="grid gap-3">
+              <button type="button" class="fact-btn" data-truth="false">
+                Bisa nahan napas di air selama 2 menit
+              </button>
+              <button type="button" class="fact-btn" data-truth="true">
+                Bisa main catur
+              </button>
+              <button type="button" class="fact-btn" data-truth="false">
+                Bisa salto
+              </button>
+            </div>
+          </div>
+
+          <!-- Feedback -->
+          <div class="mt-6 min-h-[2.5rem] flex items-center">
+            <p id="fact-feedback" class="font-mono text-sm sm:text-base"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- 04 · HIT ME UP                                         -->
+      <!-- ===================================================== -->
+      <section
+        id="contact"
+        class="scroll-mt-24 py-14 sm:py-20 border-t border-sky-100"
+      >
+        <p class="eyebrow reveal">04 / Hit Me Up</p>
+        <h2
+          class="font-display text-4xl sm:text-6xl tracking-wide mt-2 mb-10 reveal"
+        >
+          LET'S TALK.
+        </h2>
+
+        <div class="grid md:grid-cols-[0.9fr_1.1fr] gap-8 md:gap-12">
+          <div class="reveal">
+            <p class="text-navy/80 leading-relaxed mb-6">
+              Got a film recommendation, a hot take about last weekend's race,
+              or just want to talk about cameras? Drop a message below — I read
+              every single one.
+            </p>
+            <ul class="space-y-3 font-mono text-sm text-slate">
+              <li class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-sky-400"></span> Usually
+                replies within 24 hours
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-sky-400"></span> Film &amp;
+                F1 talk highly encouraged
+              </li>
+            </ul>
+          </div>
+
+          <div class="ticket-card p-6 sm:p-8 reveal">
+            <form id="contact-form" class="space-y-5" novalidate>
+              <div>
+                <label
+                  for="name"
+                  class="block font-mono text-xs tracking-widest text-slate mb-2"
+                  >NAME</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="field"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block font-mono text-xs tracking-widest text-slate mb-2"
+                  >EMAIL</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="field"
+                  placeholder="you@email.com"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block font-mono text-xs tracking-widest text-slate mb-2"
+                  >MESSAGE</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="field resize-none"
+                  placeholder="Tell me something..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-navy text-white font-mono text-sm tracking-widest py-3.5 rounded-lg hover:bg-sky-600 transition-colors duration-300"
+              >
+                SEND MESSAGE
+              </button>
+            </form>
+
+            <!-- Success state: replaces the form after a valid submit -->
+            <div
+              id="contact-success"
+              class="hidden flex-col items-center justify-center text-center py-10"
+            >
+              <div
+                class="w-14 h-14 rounded-full bg-sky-100 flex items-center justify-center mb-5"
+              >
+                <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#3486C0"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 4h16v16H4z" stroke="none" />
+                  <path d="M22 6L12 13 2 6" />
+                  <path d="M2 6h20v12H2z" />
+                </svg>
+              </div>
+              <p class="font-display text-2xl sm:text-3xl tracking-wide mb-2">
+                MESSAGE SENT!
+              </p>
+              <p class="text-navy/80 leading-relaxed max-w-xs">
+                Thank you for your text! I will reply ASAP!
+              </p>
+              <button
+                type="button"
+                id="contact-reset"
+                class="mt-6 font-mono text-xs tracking-widest text-sky-600 hover:text-navy transition-colors duration-300 underline underline-offset-4"
+              >
+                SEND ANOTHER MESSAGE
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="border-t border-sky-100 mt-10">
+      <div
+        class="max-w-6xl mx-auto px-5 sm:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 font-mono text-xs text-slate"
+      >
+        <p>&copy; 2026 Anya. All rights reserved.</p>
+        <p>Made With <span class="text-sky-500">♥</span> Love</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
