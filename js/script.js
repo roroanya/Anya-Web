@@ -1,9 +1,3 @@
-/* =========================================================
-   Anya's Page — script.js
-   Handles: tab navigation, mobile menu, scroll-reveal animation,
-   2-Lies-1-Truth game, contact form.
-========================================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
   initScrollNavigation();
   initMobileMenu();
@@ -12,12 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
 });
 
-/* ---------------------------------------------------------
-   1. SCROLL NAVIGATION
-   Header buttons smooth-scroll to their target section, and
-   the active nav item updates automatically as the user
-   scrolls through the long page.
---------------------------------------------------------- */
+/* SCROLL NAVIGATION */
 function initScrollNavigation() {
   const navButtons = document.querySelectorAll(".nav-tab");
   const logo = document.querySelector(".nav-link");
@@ -41,7 +30,6 @@ function initScrollNavigation() {
     });
   }
 
-  // Highlight the nav button matching the section currently in view
   const sectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -53,15 +41,13 @@ function initScrollNavigation() {
         }
       });
     },
-    { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+    { rootMargin: "-45% 0px -45% 0px", threshold: 0 },
   );
 
   sections.forEach((section) => sectionObserver.observe(section));
 }
 
-/* ---------------------------------------------------------
-   2. MOBILE MENU (hamburger toggle)
---------------------------------------------------------- */
+/* MOBILE MENU (hamburger toggle) */
 function initMobileMenu() {
   const menuBtn = document.getElementById("menu-btn");
   const navMobile = document.getElementById("nav-mobile");
@@ -104,9 +90,7 @@ function closeMobileMenu() {
   }
 }
 
-/* ---------------------------------------------------------
-   3. SCROLL REVEAL (fade-up items as they enter viewport)
---------------------------------------------------------- */
+/* SCROLL REVEAL */
 function initScrollReveal() {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -117,15 +101,13 @@ function initScrollReveal() {
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.15 },
   );
 
   document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 }
 
-/* ---------------------------------------------------------
-   4. FUN FACTS — "2 Lies, 1 Truth" game (2 rounds)
---------------------------------------------------------- */
+/* FUN FACTS — "2 Lies, 1 Truth" game */
 function initFunFactsGame() {
   const roundBlocks = document.querySelectorAll(".round-block");
   const feedbackEl = document.getElementById("fact-feedback");
@@ -143,11 +125,15 @@ function initFunFactsGame() {
   }
 
   function goToNextRound() {
-    const currentBlock = document.querySelector(`.round-block[data-round="${currentRound}"]`);
+    const currentBlock = document.querySelector(
+      `.round-block[data-round="${currentRound}"]`,
+    );
     if (currentRound < totalRounds) {
       currentBlock.classList.add("hidden");
       currentRound += 1;
-      const nextBlock = document.querySelector(`.round-block[data-round="${currentRound}"]`);
+      const nextBlock = document.querySelector(
+        `.round-block[data-round="${currentRound}"]`,
+      );
       nextBlock.classList.remove("hidden");
       roundIndicator.textContent = `ROUND ${currentRound} / ${totalRounds}`;
       feedbackEl.textContent = "";
@@ -174,7 +160,6 @@ function initFunFactsGame() {
           btn.classList.add("is-wrong");
           showFeedback("Try Again!", "text-red-500");
 
-          // let the user try again: reset just this wrong button after a moment
           setTimeout(() => {
             btn.classList.remove("is-wrong");
           }, 700);
@@ -184,9 +169,7 @@ function initFunFactsGame() {
   });
 }
 
-/* ---------------------------------------------------------
-   5. CONTACT FORM
---------------------------------------------------------- */
+/* CONTACT FORM */
 function initContactForm() {
   const form = document.getElementById("contact-form");
   const successState = document.getElementById("contact-success");
@@ -201,7 +184,6 @@ function initContactForm() {
       return;
     }
 
-    // Swap the form out for the inline "Thank You" state
     form.classList.add("hidden");
     successState.classList.remove("hidden");
     successState.classList.add("flex");
