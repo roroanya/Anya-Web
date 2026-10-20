@@ -1,0 +1,13 @@
+{
+  "name": "anya-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Anya's personal about-me page",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./css/tailwind.css",
+    "dev": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
